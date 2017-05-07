@@ -246,7 +246,8 @@ public class CodeInput extends View {
         outAttrs.actionLabel = null;
         outAttrs.inputType = mInputType;
         outAttrs.imeOptions = EditorInfo.IME_ACTION_DONE;
-        return new BaseInputConnection(this, true);
+
+        return super.onCreateInputConnection(outAttrs);
     }
 
     @Override
